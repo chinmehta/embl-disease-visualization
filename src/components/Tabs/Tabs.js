@@ -27,22 +27,21 @@ function Tabs(props) {
 
   return (
     <React.Fragment>
-      <td colSpan="4">
+      <td colSpan="4" className="border border-gray-400">
         <div className="tab-container my-2 mx-5">
-          <div className="tab-list flex ">
+          <div className="tab-list flex border-gray-400 border-b-2">
             {allTabs.map((tabElement, index) => (
-              <div key={index}>
-                <span
-                  onClick={() => toggleTabs(index)}
-                  className={` px-4 cursor-pointer ${
-                    tabElement.active
-                      ? "bg-embl-primary-blue text-white"
-                      : "bg-white text-embl-primary-blue"
-                  }`}
-                >
-                  {tabElement.label}
-                </span>
-              </div>
+              <span
+                key={index}
+                onClick={() => toggleTabs(index)}
+                className={` px-4 cursor-pointer ${
+                  tabElement.active
+                    ? "bg-embl-primary-blue text-white"
+                    : "bg-white text-embl-primary-blue"
+                }`}
+              >
+                {tabElement.label}
+              </span>
             ))}
           </div>
           <div>
