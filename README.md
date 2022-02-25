@@ -35,4 +35,4 @@
 
 ## Application Flow Chart
 
-![Application Flow Chart Image](/images/Application-Visual-Flow-Chart.png)
+![Application Flow Chart Image](/diagrams/Application-Visual-Flow-Chart.png)
