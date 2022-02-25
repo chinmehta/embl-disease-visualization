@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react";
+import Tab from "../Tab/Tab";
 import TableCellAccordionBtn from "../TableCellAccordionBtn/TableCellAccordionBtn";
 import TableCellLink from "../TableCellLink/TableCellLink";
 import TableCellText from "../TableCellText/TableCellText";
+import Tabs from "../Tabs/Tabs";
 
 function TableRow(props) {
   const BASE_API = "https://platform.opentargets.org/target/";
@@ -29,11 +31,18 @@ function TableRow(props) {
         <TableCellText text={props.data.target.approvedName} />
         <TableCellText text={props.data.score.toFixed(3)} />
       </tr>
-      <tr className="hidden h-96" ref={accordionRef}>
-        <td colSpan="4"></td>
+      <tr className="hidden" ref={accordionRef}>
+        <Tabs>
+          <Tab label="Bar chart">
+            <div>Test Element 1</div>
+          </Tab>
+          <Tab label="Radar chart">
+            <div>Place Holder Element 2</div>
+          </Tab>
+        </Tabs>
       </tr>
     </React.Fragment>
   );
 }
 
-export default TableRow;
+export default React.memo(TableRow);
