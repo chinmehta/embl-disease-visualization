@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders when both link and text is passed as prop 1`] = `
+<td
+  className="text-embl-primary-blue px-2 border-collapse border border-gray-400 leading-3"
+>
+  <a
+    href="https://www.embl.org"
+    target="_blank"
+  >
+    EMBL
+  </a>
+</td>
+`;
+
+exports[`renders when no text and link is passed as prop 1`] = `
+<td
+  className="text-embl-primary-blue px-2 border-collapse border border-gray-400 leading-3"
+>
+  <a
+    target="_blank"
+  />
+</td>
+`;
+
+exports[`renders when only link is passed as prop 1`] = `
+<td
+  className="text-embl-primary-blue px-2 border-collapse border border-gray-400 leading-3"
+>
+  <a
+    href="https://www.embl.org"
+    target="_blank"
+  />
+</td>
+`;
+
+exports[`renders when only text is passed as prop 1`] = `
+<td
+  className="text-embl-primary-blue px-2 border-collapse border border-gray-400 leading-3"
+>
+  <a
+    target="_blank"
+  >
+    EMBL
+  </a>
+</td>
+`;

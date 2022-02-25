@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders data table ", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const dataTableElement = screen.getByText(
+    /Genes associated with lung carcinoma/i
+  );
+  expect(dataTableElement).toBeInTheDocument();
 });
