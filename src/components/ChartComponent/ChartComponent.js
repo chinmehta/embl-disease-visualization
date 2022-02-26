@@ -54,23 +54,33 @@ Chart.register(
 );
 
 function ChartComponent({ type, data }) {
-  const state = {
-    labels: ["January", "February", "March", "April", "May"],
-    datasets: [
-      {
-        label: "Rainfall",
-        backgroundColor: "rgba(75,192,192,1)",
-        borderColor: "rgba(0,0,0,1)",
-        borderWidth: 2,
-        data: [65, 59, 80, 81, 56],
-      },
-    ],
-  };
   let chartType;
   if (type === "bar") {
-    chartType = <Bar data={state} />;
+    const state = {
+      labels: ["January", "February", "March", "April", "May"],
+      datasets: [
+        {
+          label: "Rainfall",
+          backgroundColor: "#3489ca",
+          borderWidth: 0,
+          data: [65, 59, 80, 81, 56],
+        },
+      ],
+    };
+    chartType = <Bar className="max-h-full max-w-full" data={state} />;
   } else if (type === "radar") {
-    chartType = <Radar data={state} />;
+    const state = {
+      labels: ["January", "February", "March", "April", "May"],
+      datasets: [
+        {
+          label: "Rainfall",
+          backgroundColor: "transparent",
+          borderColor: "#3489ca",
+          data: [65, 59, 80, 81, 56],
+        },
+      ],
+    };
+    chartType = <Radar className="max-h-full max-w-full" data={state} />;
   }
   return <React.Fragment>{chartType}</React.Fragment>;
 }

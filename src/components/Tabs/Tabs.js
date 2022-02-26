@@ -44,7 +44,7 @@ function Tabs(props) {
               </span>
             ))}
           </div>
-          <div>
+          <div className="flex h-80 justify-center items-center">
             {allTabs.map(
               (tabElement, index) =>
                 tabElement.active && (
