@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import ChartComponent from "../ChartComponent/ChartComponent";
 import Tab from "../Tab/Tab";
 import TableCellAccordionBtn from "../TableCellAccordionBtn/TableCellAccordionBtn";
 import TableCellLink from "../TableCellLink/TableCellLink";
@@ -34,10 +35,10 @@ function TableRow(props) {
       <tr className="hidden" ref={accordionRef}>
         <Tabs>
           <Tab label="Bar chart">
-            <div>Test Element 1</div>
+            <ChartComponent type="bar" />
           </Tab>
           <Tab label="Radar chart">
-            <div>Place Holder Element 2</div>
+            <ChartComponent type="radar" />
           </Tab>
         </Tabs>
       </tr>
