@@ -55,31 +55,22 @@ Chart.register(
 
 function ChartComponent({ type, data }) {
   let chartType;
+  const EMBL_PRIMARY_BLUE = "#3489ca";
+  let state = {
+    labels: ["january", "February", "March", "April", "May"],
+    datasets: [
+      {
+        label: "Rainfall",
+        data: [65, 59, 80, 81, 56],
+        backgroundColor: EMBL_PRIMARY_BLUE,
+        borderColor: EMBL_PRIMARY_BLUE,
+      },
+    ],
+  };
   if (type === "bar") {
-    const state = {
-      labels: ["January", "February", "March", "April", "May"],
-      datasets: [
-        {
-          label: "Rainfall",
-          backgroundColor: "#3489ca",
-          borderWidth: 0,
-          data: [65, 59, 80, 81, 56],
-        },
-      ],
-    };
     chartType = <Bar className="max-h-full max-w-full" data={state} />;
   } else if (type === "radar") {
-    const state = {
-      labels: ["January", "February", "March", "April", "May"],
-      datasets: [
-        {
-          label: "Rainfall",
-          backgroundColor: "transparent",
-          borderColor: "#3489ca",
-          data: [65, 59, 80, 81, 56],
-        },
-      ],
-    };
+    state.datasets[0].backgroundColor = "transparent";
     chartType = <Radar className="max-h-full max-w-full" data={state} />;
   }
   return <React.Fragment>{chartType}</React.Fragment>;
