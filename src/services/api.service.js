@@ -1,3 +1,5 @@
+import formatData from "../utility/utility";
+
 async function getData() {
   const BASE_URL = "https://api.platform.opentargets.org/api/v4/graphql";
 
@@ -33,7 +35,7 @@ async function getData() {
       return response.json();
     })
     .then((data) => {
-      return data.data.disease.associatedTargets.rows;
+      return formatData(data.data.disease.associatedTargets.rows);
     })
     .catch((error) => {
       console.log(error);

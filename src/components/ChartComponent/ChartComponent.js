@@ -57,11 +57,11 @@ function ChartComponent({ type, data }) {
   let chartType;
   const EMBL_PRIMARY_BLUE = "#3489ca";
   let state = {
-    labels: ["january", "February", "March", "April", "May"],
+    labels: data.label,
     datasets: [
       {
-        label: "Rainfall",
-        data: [65, 59, 80, 81, 56],
+        label: `Data Type Score: ${data.approvedSymbol} and lung carcinoma`,
+        data: data.chartDataArray,
         backgroundColor: EMBL_PRIMARY_BLUE,
         borderColor: EMBL_PRIMARY_BLUE,
       },

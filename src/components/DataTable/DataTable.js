@@ -31,7 +31,7 @@ function DataTable() {
       </thead>
       <tbody>
         {myData.map((dataRow) => (
-          <TableRow key={dataRow.target.id} data={dataRow} />
+          <TableRow key={dataRow.id} data={dataRow} />
         ))}
       </tbody>
     </table>

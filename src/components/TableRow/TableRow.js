@@ -26,19 +26,19 @@ function TableRow(props) {
           clickHandler={toggleAccordion}
         />
         <TableCellLink
-          text={props.data.target.approvedSymbol}
-          link={BASE_API + props.data.target.approvedName}
+          text={props.data.approvedSymbol}
+          link={BASE_API + props.data.approvedName}
         />
-        <TableCellText text={props.data.target.approvedName} />
+        <TableCellText text={props.data.approvedName} />
         <TableCellText text={props.data.score.toFixed(3)} />
       </tr>
       <tr className="hidden" ref={accordionRef}>
         <Tabs>
           <Tab label="Bar chart">
-            <ChartComponent type="bar" />
+            <ChartComponent data={props.data} type="bar" />
           </Tab>
           <Tab label="Radar chart">
-            <ChartComponent type="radar" />
+            <ChartComponent data={props.data} type="radar" />
           </Tab>
         </Tabs>
       </tr>
