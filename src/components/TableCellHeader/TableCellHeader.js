@@ -1,12 +1,12 @@
 import React from "react";
 
-function TableCellHeader(props) {
+function TableCellHeader({ text }) {
   return (
-    <React.Fragment>
-      <td className="font-bold py-4 px-2 leading-none border border-gray-400">
-        {props.text}
-      </td>
-    </React.Fragment>
+    <>
+      <th className="font-bold py-4 px-2 leading-none border border-gray-400">
+        {text}
+      </th>
+    </>
   );
 }
 

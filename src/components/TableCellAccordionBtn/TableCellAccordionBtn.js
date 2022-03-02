@@ -2,7 +2,7 @@ import React from "react";
 
 function TableCellAccordionBtn({ text, clickHandler }) {
   return (
-    <React.Fragment>
+    <>
       <td className="flex items-stretch border border-gray-400 border-collapse p-0">
         <button
           className="flex text-xl px-3 py-3 h-100 w-100 bg-embl-primary-blue text-white w-full h-full justify-center "
@@ -11,7 +11,7 @@ function TableCellAccordionBtn({ text, clickHandler }) {
           {text}
         </button>
       </td>
-    </React.Fragment>
+    </>
   );
 }
 
