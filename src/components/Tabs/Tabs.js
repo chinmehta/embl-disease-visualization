@@ -4,7 +4,7 @@ function Tabs({ children }) {
   let [allTabs, setAllTabs] = useState(
     children.map((tab, index) => {
       const obj = {
-        label: tab.props.label,
+        label: tab.props.label ? tab.props.label : `Tab ${index + 1}`,
         active: index === 0 ? true : false,
         children: tab.props.children,
       };
