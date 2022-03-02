@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders when children is passed as prop - snapshot 1`] = `
+<td
+  className="border border-gray-400"
+  colSpan="4"
+>
+  <div
+    className="tab-container my-2 mx-5"
+  >
+    <div
+      className="tab-list flex border-gray-400 border-b-2"
+    >
+      <span
+        className=" px-4 cursor-pointer bg-embl-primary-blue text-white"
+        onClick={[Function]}
+      >
+        tab text 1
+      </span>
+      <span
+        className=" px-4 cursor-pointer bg-white text-embl-primary-blue"
+        onClick={[Function]}
+      >
+        tab text 2
+      </span>
+    </div>
+    <div
+      className="flex h-80 justify-center items-center"
+    >
+      Tab1
+    </div>
+  </div>
+</td>
+`;
+
+exports[`renders when no children is passed as prop 1`] = `
+<td
+  className="border border-gray-400"
+  colSpan="4"
+>
+  <div
+    className="tab-container my-2 mx-5"
+  >
+    <div
+      className="tab-list flex border-gray-400 border-b-2"
+    />
+    <div
+      className="flex h-80 justify-center items-center"
+    />
+  </div>
+</td>
+`;

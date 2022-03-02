@@ -6,7 +6,7 @@ import TableCellLink from "../TableCellLink/TableCellLink";
 import TableCellText from "../TableCellText/TableCellText";
 import Tabs from "../Tabs/Tabs";
 
-function TableRow(props) {
+function TableRow({ data = {} }) {
   let [accordionText, setaccordionText] = useState("+");
 
   const toggleAccordion = () => {
@@ -21,19 +21,19 @@ function TableRow(props) {
           clickHandler={toggleAccordion}
         />
         <TableCellLink
-          text={props.data.approvedSymbol}
-          link={process.env.REACT_APP_REDIRECT_URL + props.data.approvedName}
+          text={data.approvedSymbol}
+          link={process.env.REACT_APP_REDIRECT_URL + data.approvedName}
         />
-        <TableCellText text={props.data.approvedName} />
-        <TableCellText text={props.data.score.toFixed(3)} />
+        <TableCellText text={data.approvedName} />
+        <TableCellText text={data.score && data.score.toFixed(3)} />
       </tr>
       <tr className={accordionText === "+" ? "hidden" : ""}>
         <Tabs>
           <Tab label="Bar chart">
-            <ChartComponent data={props.data} type="bar" />
+            <ChartComponent data={data} type="bar" />
           </Tab>
           <Tab label="Radar chart">
-            <ChartComponent data={props.data} type="radar" />
+            <ChartComponent data={data} type="radar" />
           </Tab>
         </Tabs>
       </tr>

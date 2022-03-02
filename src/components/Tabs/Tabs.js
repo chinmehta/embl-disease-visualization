@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Tabs({ children }) {
+function Tabs({ children = [] }) {
   let [allTabs, setAllTabs] = useState(
     children.map((tab, index) => {
       const obj = {

@@ -1,4 +1,4 @@
-export default function formatData(rows) {
+export default function formatData(rows = []) {
   let formattedData = [];
 
   rows.forEach((element) => {

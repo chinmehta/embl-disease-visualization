@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders when data and type is passed as prop -bar 1`] = `
+<canvas
+  className="max-h-full max-w-full"
+  height={150}
+  role="img"
+  width={300}
+/>
+`;
+
+exports[`renders when data and type is passed as prop -radar 1`] = `
+<canvas
+  className="max-h-full max-w-full"
+  height={150}
+  role="img"
+  width={300}
+/>
+`;
+
+exports[`renders when no data and type is passed as prop 1`] = `
+<canvas
+  className="max-h-full max-w-full"
+  height={150}
+  role="img"
+  width={300}
+/>
+`;

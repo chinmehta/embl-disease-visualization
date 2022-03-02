@@ -6,6 +6,7 @@ exports[`renders when both link and text is passed as prop 1`] = `
 >
   <a
     href="https://www.embl.org"
+    rel="noopener noreferrer"
     target="_blank"
   >
     EMBL
@@ -18,6 +19,7 @@ exports[`renders when no text and link is passed as prop 1`] = `
   className="text-embl-primary-blue px-2 border-collapse border border-gray-400 leading-3"
 >
   <a
+    rel="noopener noreferrer"
     target="_blank"
   />
 </td>
@@ -29,6 +31,7 @@ exports[`renders when only link is passed as prop 1`] = `
 >
   <a
     href="https://www.embl.org"
+    rel="noopener noreferrer"
     target="_blank"
   />
 </td>
@@ -39,6 +42,7 @@ exports[`renders when only text is passed as prop 1`] = `
   className="text-embl-primary-blue px-2 border-collapse border border-gray-400 leading-3"
 >
   <a
+    rel="noopener noreferrer"
     target="_blank"
   >
     EMBL

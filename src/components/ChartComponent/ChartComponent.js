@@ -53,7 +53,7 @@ Chart.register(
   Tooltip
 );
 
-function ChartComponent({ type, data }) {
+function ChartComponent({ type = "bar", data = {} }) {
   let chartType;
   const EMBL_PRIMARY_BLUE = "#3489ca";
   const options = {
@@ -64,16 +64,18 @@ function ChartComponent({ type, data }) {
       },
       title: {
         display: true,
-        text: `Data Type Score: ${data.approvedSymbol} and lung carcinoma`,
+        text: `Data Type Score: ${
+          data.approvedSymbol || ""
+        } and lung carcinoma`,
       },
     },
   };
 
   let state = {
-    labels: data.label,
+    labels: data.label || [],
     datasets: [
       {
-        data: data.chartDataArray,
+        data: data.chartDataArray || [],
         backgroundColor: EMBL_PRIMARY_BLUE,
         borderColor: EMBL_PRIMARY_BLUE,
       },

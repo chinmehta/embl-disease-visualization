@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders when children is passed as prop 1`] = `
+<div>
+  Test Text
+</div>
+`;
+
+exports[`renders when no children is passed as prop 1`] = `null`;

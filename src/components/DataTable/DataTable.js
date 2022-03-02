@@ -7,9 +7,10 @@ function DataTable({ tableDataHeader, tableData }) {
     <table className="sm:w-full lg:w-4/5 table-auto border-solid border-gray-400 border-collapse mb-10">
       <thead>
         <tr>
-          {tableDataHeader.map((headerElement, index) => (
-            <TableCellHeader key={index} text={headerElement} />
-          ))}
+          {tableDataHeader &&
+            tableDataHeader.map((headerElement, index) => (
+              <TableCellHeader key={index} text={headerElement} />
+            ))}
         </tr>
       </thead>
       <tbody className="border border-gray-400 border-collapse">
