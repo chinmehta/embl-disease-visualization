@@ -36,3 +36,26 @@
 ## Application Flow Chart
 
 ![Application Flow Chart Image](/diagrams/Application-Visual-Flow-Chart.png)
+
+## Running Project Locally
+
+### Clone the repository
+
+`git clone https://github.com/ekthaweird/embl-disease-visualization.git`
+
+### Install dependencies
+
+`cd embl-disease-visualization`
+`npm install`
+
+### Run the project
+
+`npm start`
+
+### View project
+
+Project should automatically be launched [here](http://localhost:3000)
+
+## Demo
+
+[Live Demo](https://embl-82173.web.app/)

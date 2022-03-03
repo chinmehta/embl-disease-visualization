@@ -49,7 +49,7 @@ function App() {
       );
     }
     fetchTableData();
-  }, []);
+  });
 
   return (
     <div className="w-screen max-w-full min-h-screen h-full flex items-center flex-col ">
