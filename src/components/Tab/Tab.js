@@ -1,7 +1,7 @@
 import React from "react";
 
 function Tab(props) {
-  return <React.Fragment>{props.children}</React.Fragment>;
+  return <>{props.children}</>;
 }
 
 export default Tab;

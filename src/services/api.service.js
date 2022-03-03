@@ -1,36 +1,13 @@
 import formatData from "../utility/utility";
 
-async function getData() {
-  const BASE_URL = "https://api.platform.opentargets.org/api/v4/graphql";
-
-  const query = {
-    operationName: "lungCarcinomaAssociatedTargets",
-    variables: {},
-    query: `query lungCarcinomaAssociatedTargets {
-    disease(efoId: "EFO_0001071") {
-      associatedTargets(page: { index: 0, size: 10 }) {
-        rows {
-          target {
-            id
-            approvedSymbol
-            approvedName
-          }
-          score
-          datatypeScores {
-            id
-            score
-          }
-        }
-      }
-    }
-  }`,
+async function getData(url, method = "GET", headers, body) {
+  const requestObj = {
+    method,
+    headers,
+    body,
   };
 
-  return fetch(BASE_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(query),
-  })
+  return fetch(url, requestObj)
     .then((response) => {
       return response.json();
     })

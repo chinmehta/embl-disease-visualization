@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-function Tabs(props) {
+function Tabs({ children = [] }) {
   let [allTabs, setAllTabs] = useState(
-    props.children.map((tab, index) => {
+    children.map((tab, index) => {
       const obj = {
-        label: tab.props.label,
+        label: tab.props.label ? tab.props.label : `Tab ${index + 1}`,
         active: index === 0 ? true : false,
         children: tab.props.children,
       };
@@ -26,7 +26,7 @@ function Tabs(props) {
   };
 
   return (
-    <React.Fragment>
+    <>
       <td colSpan="4" className="border border-gray-400">
         <div className="tab-container my-2 mx-5">
           <div className="tab-list flex border-gray-400 border-b-2">
@@ -46,17 +46,12 @@ function Tabs(props) {
           </div>
           <div className="flex h-80 justify-center items-center">
             {allTabs.map(
-              (tabElement, index) =>
-                tabElement.active && (
-                  <React.Fragment key={index}>
-                    {tabElement.children}
-                  </React.Fragment>
-                )
+              (tabElement) => tabElement.active && tabElement.children
             )}
           </div>
         </div>
       </td>
-    </React.Fragment>
+    </>
   );
 }
 
