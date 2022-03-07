@@ -10,34 +10,33 @@ function App() {
     "Overall Association Score",
   ];
 
-  const query = {
-    operationName: "lungCarcinomaAssociatedTargets",
-    variables: {},
-    query: `query lungCarcinomaAssociatedTargets {
-      disease(efoId: "EFO_0001071") {
-        associatedTargets(page: { index: 0, size: 25 }) {
-          rows {
-            target {
-              id
-              approvedSymbol
-              approvedName
-            }
-            score
-            datatypeScores {
-              id
-              score
-            }
-          }
-        }
-      }
-    }`,
-  };
-
-  const header = { "Content-Type": "application/json" };
-
   const [tableData, settableData] = useState(null);
 
   useEffect(() => {
+    const query = {
+      operationName: "lungCarcinomaAssociatedTargets",
+      variables: {},
+      query: `query lungCarcinomaAssociatedTargets {
+        disease(efoId: "EFO_0001071") {
+          associatedTargets(page: { index: 0, size: 25 }) {
+            rows {
+              target {
+                id
+                approvedSymbol
+                approvedName
+              }
+              score
+              datatypeScores {
+                id
+                score
+              }
+            }
+          }
+        }
+      }`,
+    };
+
+    const header = { "Content-Type": "application/json" };
     async function fetchTableData() {
       settableData(
         await getData(
@@ -49,7 +48,7 @@ function App() {
       );
     }
     fetchTableData();
-  });
+  }, []);
 
   return (
     <div className="w-screen max-w-full min-h-screen h-full flex items-center flex-col ">
