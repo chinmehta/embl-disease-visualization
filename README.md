@@ -41,7 +41,7 @@
 
 ### Clone the repository
 
-`git clone https://github.com/ekthaweird/embl-disease-visualization.git`
+`git clone https://github.com/chinmehta/embl-disease-visualization.git`
 
 ### Install dependencies
 
